@@ -73,7 +73,7 @@ angular.module('starter.controllers', [])
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             };          
              
-            var map = new google.maps.Map(document.getElementById("map"), mapOptions);          
+            var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);          
              
             $scope.map = map;   
             $ionicLoading.hide();           
