@@ -1,3 +1,20 @@
+//function($ionicPlatform) {
+//  $ionicPlatform.ready(function() {
+    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+    // for form inputs)
+//    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+//      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+//      cordova.plugins.Keyboard.disableScroll(true);
+
+//    }
+//    if (window.StatusBar) {
+      // org.apache.cordova.statusbar required
+//      StatusBar.styleDefault();
+//    }
+//  });
+//})
+
+
 angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
@@ -26,13 +43,17 @@ angular.module('starter.controllers', [])
     enableFriends: true
   };
 })
- 
-.controller('mapCtrl', function($scope, $cordovaGeolocation, $ionicLoading) {
-  ionic.Platform.ready(function(){
-  // code from http://www.gajotres.net/using-cordova-geoloacation-api-with-google-maps-in-ionic-framework/2/	  
-  $ionicLoading.show({
-            template: '<ion-spinner icon="bubbles"></ion-spinner><br/>Acquiring location!'
-        });
+
+
+// code from http://www.gajotres.net/using-cordova-geoloacation-api-with-google-maps-in-ionic-framework/2/	   
+//.controller('mapCtrl', function($scope, $cordovaGeolocation, $ionicLoading, ionicPlatform) {
+//  ionic.Platform.ready(function(){
+//  $ionicLoading.show({
+//            template: '<ion-spinner icon="bubbles"></ion-spinner><br/>Acquiring location!'
+//        });
+
+.controller('mapCtrl', function($scope, $cordovaGeolocation) {
+
          
         var posOptions = {
             enableHighAccuracy: true,
@@ -61,5 +82,4 @@ angular.module('starter.controllers', [])
             $ionicLoading.hide();
             console.log(err);
         });
-  };
 });

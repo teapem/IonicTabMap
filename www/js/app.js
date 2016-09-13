@@ -5,23 +5,23 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-app = angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter.services']);
+app = angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter.services'])
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
+//.run(function($ionicPlatform) {
+//  $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
-    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      cordova.plugins.Keyboard.disableScroll(true);
+//    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+//      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+//      cordova.plugins.Keyboard.disableScroll(true);
 
-    }
-    if (window.StatusBar) {
+//    }
+//    if (window.StatusBar) {
       // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
-    }
-  });
-})
+//      StatusBar.styleDefault();
+//    }
+//  });
+//})
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -77,7 +77,7 @@ app = angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 's
         controller: 'AccountCtrl'
       }
     }
-  });
+  })
    
  .state('tab.map', {
     url: '/map',
